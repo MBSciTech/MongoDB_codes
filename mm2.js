@@ -8,8 +8,8 @@ const employees = mg.model('employees',sc);
 
 async function op(){
     var r = []
-    await r.push(employees.updateMany({age:25},{salay:50000}));
-    await r.push({name:{$reger:/^e/i}});
+     r.push(await employees.updateMany({age:25},{salay:50000}));
+     r.push(await {name:{$regex:/^e/i}});
     console.log(r);
 }
 
