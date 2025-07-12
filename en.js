@@ -80,6 +80,15 @@ const User = mg.model('User', userSchema);
 app.use(express.static(__dirname,{index:'enform.html'}));
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/find',async (req,res)=>{
+    try{
+        var r = await User.find({}, {uname:1, _id:0});
+        res.send(JSON.stringify(r));
+    }catch(e){
+        res.status(404).send('No data' + e);
+    }
+});
+
 // POST route to handle form submission
 app.post('/signup', async (req, res) => {
     try {
