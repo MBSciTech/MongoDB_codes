@@ -81,7 +81,7 @@ const oper = async () => {
 
     r.push(await User.updateOne({ role: 'admin' }, { $set: { uname: 'admin12' } }));
 
-    r.push(await User.deleteOne({ age: { $lt: 20 } }));
+    
 
     r.push(await User.find({}, { email: 1, comment: 1, _id: 0 }).sort({ age: -1 }).limit(1));
 
