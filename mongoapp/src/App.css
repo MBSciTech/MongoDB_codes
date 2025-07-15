@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+body{
+  display:grid;
+  justify-content: center;
+  align-items: center;
+}
+
+form{
+  gap:20px;
+  padding:20px;
+  border:2px solid blue;
+  border-radius: 16px;
+  width:400px;
+  display:grid;
+  justify-content: center;
+  align-items: center;
+}
